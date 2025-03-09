@@ -1,14 +1,13 @@
-let varA = 'A'
-let varB = 'B'
-let varC = 'C'
-const temp = varA
-
-[varA, varB, varC] = [varB, varC, varA];
-
-console.log(varA, varB, varC); // B C A
+let varA = 'A' //B
+let varB = 'B' //C
+let varC = 'C' //A
 
 /*const temp = varA
+[varA, varB, varC] = [varB, varC, varA];*/
+
+const temp = varA
 varA = varB
 varB = varC
-varC = temp*/
+varC = temp
+console.log(varA, varB, varC); // B C A
 
