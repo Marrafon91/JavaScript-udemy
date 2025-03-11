@@ -7,7 +7,7 @@ console.log(`${umaString} em um lindo dia.`) // concatenacao
 // Expressoes Regular.
 console.log(umaString.indexOf('o', 3)) // indexof
 console.log(umaString.lastIndexOf('m', 3)) // busca a ultima ocorrencia
-console.log(umaString.match(/[a-z]/g)) // pegar todos os caracteres
+console.log(umaString.match(/[a-zA-Z]/g)) // pegar todos os caracteres
 console.log(umaString.search(/r/)) // busca a primeira ocorrencia
 console.log(umaString.replace(/r/g, '#')) // replace
 console.log(umaString.length) // tamanho da string
