@@ -28,6 +28,10 @@ body {
   padding: 20px;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 20px;}
+
 .container {
   max-width: 600px;
   width: 100%;
@@ -84,9 +88,13 @@ form button:active {
   transform: scale(0.98);
 }
 
-.paragrafo-resultado {
+.paragrafo-resultado, .bad {
   background: rgb(109, 255, 199);
   padding: 10px 20px;
   margin: 20px auto;
   border-radius: 8px;
+}
+
+.bad {
+  background: rgb(255, 109, 109);
 }
