@@ -83,3 +83,10 @@ form button:active {
   background-color: #000;
   transform: scale(0.98);
 }
+
+.paragrafo-resultado {
+  background: rgb(109, 255, 199);
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
