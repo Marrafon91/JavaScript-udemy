@@ -1,49 +1,46 @@
-// Selecionando elementos do HTML
-const relogio = document.querySelector(".relogio");
-const iniciar = document.querySelector(".iniciar");
-const pausar = document.querySelector(".pausar");
-const zerar = document.querySelector(".zerar");
+function relogio() {
+  const relogio = document.querySelector(".relogio");
+  let segundos = 0;
+  let timer;
 
-let segundos = 0; // Variável para contar os segundos
-let timer; // Variável para armazenar o setInterval
+  // Função que inicia o cronômetro
+  function iniciaRelogio() {
+    timer = setInterval(function () {
+      segundos++;
+      relogio.innerHTML = criaHoraDosSegundos(segundos);
+    }, 1000);
+  }
 
-// Função para converter segundos para formato HH:MM:SS
-function getTimeFromSeconds(segundos) {
-  const data = new Date(segundos * 1000);
-  return data.toLocaleTimeString("pt-BR", {
-    hour12: false,
-    timeZone: "UTC",
+  // Função que converte os segundos em formato HH:MM:SS
+  function criaHoraDosSegundos(segundos) {
+    const data = new Date(segundos * 1000);
+    return data.toLocaleTimeString("pt-BR", {
+      hour12: false,
+      timeZone: "UTC", // Define o fuso horário UTC para evitar problemas com o horário local
+    });
+  }
+
+  // Evento de clique que lida com os botões
+  document.addEventListener("click", function (e) {
+    const el = e.target; // Captura o elemento clicado
+
+    if (el.classList.contains("iniciar")) {
+      relogio.classList.remove("pausado"); // Remove a classe que indica pausa
+      clearInterval(timer); // Evita múltiplos intervalos ao clicar repetidamente
+      iniciaRelogio();
+    }
+
+    if (el.classList.contains("pausar")) {
+      relogio.classList.add("pausado"); // Adiciona a classe para estilizar a pausa
+      clearInterval(timer); // Para o cronômetro sem zerá-lo
+    }
+
+    if (el.classList.contains("zerar")) {
+      relogio.classList.remove("pausado"); // Remove a classe de pausa
+      clearInterval(timer); // Para o cronômetro
+      segundos = 0; // Reseta a contagem
+      relogio.innerHTML = "00:00:00"; // Atualiza a interface
+    }
   });
 }
-
-// Função que inicia o cronômetro
-function mostraHora() {
-  return setInterval(function () {
-    segundos++; // Incrementa os segundos
-    const horaAtual = getTimeFromSeconds(segundos); // Converte para formato HH:MM:SS
-    relogio.innerHTML = horaAtual; // Atualiza o relógio no HTML
-  }, 1000);
-}
-
-// Evento do botão "Iniciar"
-iniciar.addEventListener("click", function () {
-  clearInterval(timer); // Evita múltiplos intervalos
-  timer = mostraHora(); // Inicia o cronômetro
-  relogio.classList.remove("pausado"); // Remove a classe de pausa
-});
-
-// Evento do botão "Pausar"
-pausar.addEventListener("click", function () {
-  clearInterval(timer); // Para o cronômetro
-  relogio.classList.add("pausado"); // Adiciona uma classe para possível estilização
-  });
-
-// Evento do botão "Zerar"
-zerar.addEventListener("click", function () {
-  clearInterval(timer); // Para o cronômetro
-  segundos = 0; // Reseta os segundos
-  relogio.innerHTML = "00:00:00"; // Atualiza o relógio para 00:00:00
-  relogio.classList.remove("pausado"); // Remove a classe de pausa
-});
-
-// Removendo a linha "container.appendChild(relogio);", pois "container" não foi definido.
+relogio();

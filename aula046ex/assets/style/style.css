@@ -1,14 +1,15 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400&display=swap');
 
 :root {
-  --primary-color: #ff0080; /* Rosa neon */
-  --secondary-color: #00e5ff; /* Azul neon */
-  --background-color: #1a1a1a; /* Preto clássico dos anos 80 */
-  --text-color: #ffffff;
-  --button-bg: #ff00ff; /* Roxo neon */
-  --button-hover: #ffcc00; /* Amarelo neon */
+  --primary-color: #6BA292; /* Verde suave para relaxamento */
+  --secondary-color: #A4D4AE; /* Verde mais claro para harmonia */
+  --background-color: #F5F5DC; /* Bege claro para suavidade */
+  --text-color: #2C3E50; /* Azul acinzentado para leitura confortável */
+  --button-bg: #A4D4AE; /* Verde calmante */
+  --button-hover: #6BA292; /* Verde mais intenso ao passar o mouse */
+  --border-color: #FFFFFF; /* Bordas suaves e leves */
 }
 
 * {
@@ -18,8 +19,9 @@
 }
 
 body {
-  font-family: 'Press Start 2P', cursive;
-  background: linear-gradient(45deg, #1a1a1a, #111111);
+  font-family: 'Raleway', sans-serif;
+  background: url('../img/spa.jpeg') no-repeat center center fixed;
+  background-size: cover;
   color: var(--text-color);
   font-size: 1.2em;
   line-height: 1.6em;
@@ -34,49 +36,56 @@ body {
 .container {
   max-width: 600px;
   width: 100%;
-  background: black;
+  background: rgba(255, 255, 255, 0.9);
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--primary-color);
-  border: 4px solid var(--primary-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--primary-color);
   text-align: center;
+}
+
+h1 {
+  color: var(--primary-color);
 }
 
 .relogio {
   font-size: 3em;
-  margin: 30px auto;
-  color: var(--secondary-color);
-  text-shadow: 2px 2px 5px var(--primary-color);
-  border: 4px solid var(--primary-color);
+  margin: 30px;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 5px var(--secondary-color);
+  border: 3px solid var(--secondary-color);
   padding: 25px;
   display: inline-block;
-  background: black;
+  background: #FFFFFF;
+  font-weight: bold;
+  border-radius: 12px;
 }
 
 .pausado {
-  color: red;
-  text-shadow: 0 0 10px red, 0 0 20px red;
+  color: #D98880;
+  text-shadow: 0 0 10px #D98880, 0 0 20px #D98880;
 }
 
 /* Estilo para os botões */
 button {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.8em;
-  padding: 10px 20px;
+  font-family: 'Pacifico', cursive;
+  font-size: 1em;
+  padding: 12px 25px;
   margin: 10px;
-  border: none;
+  border: 2px solid var(--border-color);
   cursor: pointer;
   color: var(--text-color);
   background: var(--button-bg);
-  border: 3px solid var(--text-color);
   box-shadow: 0 0 10px var(--button-bg);
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
 }
 
 button:hover {
   background: var(--button-hover);
   box-shadow: 0 0 15px var(--button-hover);
-  color: black;
+  color: #FFFFFF;
 }
 
 button:active {

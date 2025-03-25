@@ -6,8 +6,8 @@
 //Número  NÃO é divisivel por por 3 e 5 = Retorna o proprio número
 // Checar se o número é realmente um número = Retorna o proprio número
 // Use a função com números de 0 a 100
-
-/* function calcular() {
+/* 
+ function calcular() {
   let num1 = 10;
   let num2 = 5;
 
@@ -17,7 +17,7 @@
     console.log(`${num1} NÃO é divisível por ${num2}`);
   }
 }
-calcular() */
+calcular()  */
 
 function calcular(num) {
   if (typeof num !== "number") {
