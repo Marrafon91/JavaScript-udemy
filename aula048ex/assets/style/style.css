@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* Importando fonte elegante e moderna */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&display=swap');
+
+/* Paleta de cores inspirada na aeronáutica */
+:root {
+  --primary-color: #1A73E8; /* Azul aeronáutico */
+  --secondary-color: #0D47A1; /* Azul escuro */
+  --background-color: #E3F2FD; /* Azul claro de fundo */
+  --text-color: #1C1C1C; /* Preto suave */
+  --button-hover: #1565C0; /* Azul hover */
+  --button-active: #0B3D91; /* Azul mais escuro */
+  --danger-color: #B71C1C; /* Vermelho para botão de apagar */
+  --danger-hover: #D32F2F;
+}
+
+/* Reset e estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Estilização do container principal */
+.container {
+  max-width: 500px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Estilo para os itens da lista */
+li {
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 1em;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input estilizado */
+input {
+  width: 100%;
+  font-size: 1.1em;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+/* Botão principal estilizado */
+button {
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  margin: 15px 0px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.03);
+}
+
+button:active {
+  background-color: var(--button-active);
+  transform: scale(0.97);
+}
+
+/* Estilização do botão "Apagar" */
+.apagar {
+  width: 90px;
+  background-color: var(--danger-color);
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.apagar:hover {
+  background-color: var(--danger-hover);
+  transform: scale(1.05);
+}
+
+.apagar:active {
+  background-color: #8E0000;
+  transform: scale(0.95);
+}
