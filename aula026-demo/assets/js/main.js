@@ -41,7 +41,7 @@ function getNivelImc(imc) {
   if (imc >= 24.9) return nivel[2];
   if (imc >= 18.5) return nivel[1];
   if (imc < 18.5) return nivel[0];
-  }
+}
 function getImc(peso, altura) {
   const imc = peso / altura ** 2;
   return imc.toFixed(2);
@@ -56,7 +56,6 @@ function setResultado(msg, isValid) {
   const resultado = document.querySelector("#resultado");
   resultado.innerHTML = "";
   const p = criaP();
-  
 
   if (isValid) {
     p.classList.add("paragrafo-resultado");
