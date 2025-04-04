@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #209DB9;
+  --secondary-color: #147896;
+  --background-color: #F4F4F4;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 1.2em;
+  line-height: 1.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.calc {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  color: #1d8fd1;
+  
+}
+
+.calculadora {
+  width: 400px;
+  
+}
+
+.display {
+  font-size: 2em;
+  width: 100%;
+  text-align: right;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  font-size: 1em;
+  border: none;
+  background: #05314b;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(55, 145, 230, 0.4);
+}
+
+.btn-eq {
+  background-color: #4169e1;
+}
