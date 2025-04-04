@@ -10,9 +10,8 @@ function criaCalculadora() {
 
     pressionaEnter() {
       this.display.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-          this.realizaConta();
+        if (e.keyCode === "13") {
+            this.realizaConta();
         }
       });
     },
