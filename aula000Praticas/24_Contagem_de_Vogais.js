@@ -5,11 +5,11 @@ A função deve contar o número de vogais presentes na string (considerando let
 A função deve retornar o total de vogais encontradas. */
 
 function countVogals(texto) {
-    const vowels = "aeiouAEIOU"; 
+    const vogals = "aeiouAEIOU"; 
     let conta = 0; 
   
     for (let contador of texto) { 
-      if (vowels.includes(contador)) { 
+      if (vogals.includes(contador)) { 
         conta++; 
       }
     }
