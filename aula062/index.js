@@ -74,3 +74,15 @@ console.log(nomesCompletos);
 console.log(nomesCompletos.length); // Saída: 5
 
 console.log(novo, deslocado);
+
+/* Explicação dos Métodos Utilizados
+✅ join(" ") → Converte o array em uma string, unindo os elementos com um espaço.
+✅ slice(0, -2) → Cria uma cópia do array sem os últimos dois elementos.
+✅ spread operator ([...array]) → Cria uma cópia do array.
+✅ unshift("valor") → Adiciona um elemento no início do array.
+✅ push("valor") → Adiciona um elemento no final do array.
+✅ pop() → Remove e retorna o último elemento do array.
+✅ shift() → Remove e retorna o primeiro elemento do array.
+✅ nomes[índice] = "valor" → Modifica um elemento do array pelo índice.
+✅ delete nomes[índice] → Remove um elemento sem alterar o comprimento do array (deixa undefined).
+✅ nomes.length → Retorna a quantidade de elementos do array. */
