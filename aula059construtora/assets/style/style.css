@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* Importando fonte medieval */
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+:root {
+  --primary-bg: #3b2f2f; /* Fundo principal imitando couro velho */
+  --secondary-bg: #4e3d3d; /* Fundo dos botões e estrutura */
+  --btn-bg: #2c241f; /* Botões imitando ferro */
+  --btn-eq-bg: #a67c00; /* Botão de igual dourado */
+  --btn-hover: #5a4a42; /* Efeito de hover mais iluminado */
+  --text-color: #d4c8b0; /* Cor do texto em tom envelhecido */
+  --shadow-color: rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+  --border-color: #8b5a2b; /* Detalhes em bronze */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Uncial Antiqua', cursive;
+  background: url('https://www.transparenttextures.com/patterns/aged-paper.png'); /* Textura de pergaminho */
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container principal */
+.container {
+  max-width: 400px;
+  width: 100%;
+  background-color: var(--secondary-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px var(--shadow-color);
+  text-align: center;
+  border: 3px solid var(--border-color);
+}
+
+/* Título da calculadora */
+.calc {
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--btn-eq-bg);
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+/* Campo de exibição */
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: right;
+  padding: 10px;
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  box-shadow: inset 0 0 12px var(--shadow-color);
+  outline: none;
+}
+
+/* Estilização dos botões */
+.btn {
+  width: 100%;
+  height: 55px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--btn-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 3px 5px var(--shadow-color);
+  text-transform: uppercase;
+}
+
+/* Efeito ao passar o mouse nos botões */
+.btn:hover {
+  background-color: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+/* Botão de resultado (=) com cor dourada */
+.btn-eq {
+  background-color: var(--btn-eq-bg);
+  border-color: #ffd700;
+}
+
+.btn-eq:hover {
+  background-color: #cc9900;
+}
+
+/* Botão de limpar (C) com cor avermelhada */
+.btn-clear {
+  background-color: #8b0000;
+  border-color: #a52a2a;
+}
+
+.btn-clear:hover {
+  background-color: #600000;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .btn {
+    height: 50px;
+    font-size: 1em;
+  }
+}
