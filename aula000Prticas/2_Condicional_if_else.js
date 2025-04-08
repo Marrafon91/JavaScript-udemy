@@ -10,14 +10,14 @@
 
 5. Imprima o valor de resultado após a condicional */
 
-const a = 10
-const b = 15
+const a = 10;
+const b = 15;
 let resultado;
 
-if(a > b) {
-   resultado = "È maior"
+if (a > b) {
+  resultado = "È maior";
 } else {
-   resultado = "È menor"
+  resultado = "È menor";
 }
 
-console.log(resultado)
+console.log(resultado);

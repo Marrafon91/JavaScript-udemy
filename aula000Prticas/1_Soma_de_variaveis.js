@@ -5,9 +5,8 @@
 Exiba o resultado de c no console
  */
 
-/* let a = 10
-let b = 5
-let c = a + b
+let a = 10;
+let b = 5;
+let c = a + b;
 
-console.log(c) */
-
+console.log(c);

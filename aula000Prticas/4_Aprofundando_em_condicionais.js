@@ -11,17 +11,20 @@ Se o número for negativo, retorne "Negativo".
 
 Se o número for zero, retorne "Neutro". */
 
- function classificarNumero (numero) {
-    if (numero > 0 && numero % 2 === 0) {
-        return "Positivo par"
-    } else if (numero > 0 && numero % 2 !== 0) {
-        return "Positivo impar"
-    } else if (numero < 0) {
-        return "Negativo"
-    } else {
-        return "Neutro"
-    }
+function classificarNumero(numero) {
+  if (numero > 0 && numero % 2 === 0) {
+    return "Positivo par";
+  } else if (numero > 0 && numero % 2 !== 0) {
+    return "Positivo impar";
+  } else if (numero < 0) {
+    return "Negativo";
+  } else {
+    return "Neutro";
+  }
 }
 
-console.log(classificarNumero(-18)) 
-
+console.log(classificarNumero(-18));
+console.log(classificarNumero(18));
+console.log(classificarNumero(-15));
+console.log(classificarNumero(19));
+console.log(classificarNumero(0));
