@@ -85,4 +85,4 @@ console.log(novo, deslocado);
 ✅ shift() → Remove e retorna o primeiro elemento do array.
 ✅ nomes[índice] = "valor" → Modifica um elemento do array pelo índice.
 ✅ delete nomes[índice] → Remove um elemento sem alterar o comprimento do array (deixa undefined).
-✅ nomes.length → Retorna a quantidade de elementos do array. */
+✅ nomes.length → Retorna a quantidade de elementos do array. */ 
