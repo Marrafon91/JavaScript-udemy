@@ -15,3 +15,7 @@ const arr3 = [
 
 // Exibe o array completo no console
 console.log(arr3); 
+
+// Outro modo para concatenar array
+const arr4 = arr1.concat(arr2, arr3)
+console.log(arr4)
