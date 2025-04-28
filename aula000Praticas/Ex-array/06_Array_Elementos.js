@@ -1,7 +1,7 @@
 // Crie dois arrays, um com mais de 5 elementos e outro com menos;
 // Faca uma funcao que verifica o numero de elementos;
 // Se possuir menos que 5, imprima "Poucos elementos" no console;
-// Se tiver masi, imprima "Muitos elementos"
+// Se tiver mais, imprima "Muitos elementos"
 
 const carros = ['BMW', 'VW', 'Hyundai','Mercedes','Audi', 'Honda']
 const modelosCarros = ['HB20','Audi Q3', 'Onix']

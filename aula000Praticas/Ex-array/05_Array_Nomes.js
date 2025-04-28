@@ -3,6 +3,6 @@
 // se exister imprima alguma mensagem no console;
 
 const nomes = ['Maria', 'Simoni', 'Rezende', 'Guilherme', 'Marcos']
-if(nomes.includes('Guilherme')) {
-    console.log('O foi Nome encontrados')
+if (nomes.includes('Guilherme')) {
+    console.log(`O Nome foi encontrados ${nomes.includes("Guilherme")}`)
 }
