@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Conta Bancária</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simulador de Conta Bancária</h1>
+
+      <section>
+        <h2>Conta Corrente</h2>
+        <button onclick="contaCorrente.depositar(50)">Depositar R$50</button>
+        <button onclick="contaCorrente.sacar(30)">Sacar R$30</button>
+        <button onclick="contaCorrente.sacar(150)">Sacar R$150</button>
+      </section>
+
+      <section>
+        <h2>Conta Poupança</h2>
+        <button onclick="contaPoupanca.depositar(50)">Depositar R$50</button>
+        <button onclick="contaPoupanca.sacar(30)">Sacar R$30</button>
+        <button onclick="contaPoupanca.sacar(150)">Sacar R$150</button>
+      </section>
+
+      <pre id="log"></pre>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

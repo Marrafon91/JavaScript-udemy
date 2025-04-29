@@ -37,9 +37,9 @@ function ValidaCPF(cpfEnviado) {
     const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length);
     return sequencia === this.cpfLimpo;
   };
-  const cpf = new ValidaCPF("705.484.450-52");
+  // const cpf = new ValidaCPF("705.484.450-52");
   
-  document.getElementById('cpfForm').addEventListener('submit', function(e) {
+  document.getElementById('cpfForm').addEventListener('submit',(e) => {
     e.preventDefault();
     const cpfInput = document.getElementById('cpf').value;
     const cpf = new ValidaCPF(cpfInput);
