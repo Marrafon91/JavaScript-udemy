@@ -1,44 +1,43 @@
-// const request = (obj) => {
-//   return new Promise((resolve, reject) => {
-//     const xhr = new XMLHttpRequest();
-//     xhr.open(obj.method, obj.url, true);
-//     xhr.send();
-
-//     xhr.addEventListener("load", (e) => {
-//       if (xhr.status >= 200 && xhr.status < 300) {
-//         resolve(xhr.responseText);
-//       } else {
-//         reject(xhr.statusText);
-//       }
-//     });
-//   });
-// };
-
+// Adiciona um ouvinte de eventos para cliques em qualquer lugar do documento
 document.addEventListener("click", (e) => {
-  const el = e.target;
-  const tag = el.tagName.toLowerCase();
+  const el = e.target; // Pega o elemento que foi clicado
+  const tag = el.tagName.toLowerCase(); // Converte o nome da tag para minúsculo (por padrão vem em maiúsculo)
 
+  // Verifica se o elemento clicado é um link <a>
   if (tag === "a") {
-    e.preventDefault();
-    carregaPagina(el);
+    e.preventDefault(); // Impede o comportamento padrão (navegação para outra página)
+    carregaPagina(el); // Chama a função para carregar a nova página via AJAX
   }
 });
 
-function carregaPagina(el) {
-  const href = el.getAttribute("href");
-  fetch()
-  carregaResultado(response);
+
+// Função assíncrona que carrega a página a partir do href do link clicado
+async function carregaPagina(el) {
+  try {
+    const href = el.getAttribute("href"); // Pega o valor do atributo href do link
+
+    // Faz uma requisição GET usando a API fetch
+    const response = await fetch(href);
+
+    // Se a resposta não for OK (por exemplo, 404 ou 500), lança um erro
+    if (response.status !== 200) throw new Error('ERRO 404');
+
+    // Lê o corpo da resposta como texto (HTML, por exemplo)
+    const html = await response.text();
+
+    // Envia o HTML obtido para a função que exibe no navegador
+    carregaResultado(html);
+  } catch (e) {
+    // Se algo der errado, exibe o erro no console
+    console.error(e);
+  }
 }
 
+
+// Função que insere o conteúdo HTML no elemento com classe .resultado
 function carregaResultado(response) {
-  const resultado = document.querySelector(".resultado");
-  resultado.innerHTML = response;
+  const resultado = document.querySelector(".resultado"); // Seleciona o elemento onde será exibido o conteúdo
+  resultado.innerHTML = response; // Insere o HTML carregado dentro da div
 }
 
-// fetch('pagina4.html')
-// .then(resposta => {
-//   if(resposta.status !== 200) throw new Error('ERRO 404 NOSSO');
-//   return resposta.text();
-// })
-// .then(html => console.log(html))
-// .catch(e => console.error(e));
+
