@@ -5,7 +5,7 @@
 :root {
   --primary-color: #209DB9;
   --secondary-color: #147896;
-  --background-color: #F4F4F4;
+  --background-color: #f4f4f4;
   --text-color: #333;
 }
 
@@ -28,41 +28,41 @@ body {
   padding: 20px;
 }
 
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container {
   max-width: 600px;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--background-color);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+label {
+    font-size: 1em;
 }
 
-form label {
-  font-weight: 600;
+input {
   font-size: 1em;
-}
-
-form input {
-  font-size: 1em;
-  height: 50px;
-  padding: 10px;
+  padding: 5px;
+  margin: 0 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
-form input:focus {
+input:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(32, 157, 185, 0.5);
 }
 
-form button {
+button {
   border: none;
   background-color: var(--primary-color);
   color: #fff;
@@ -72,14 +72,26 @@ form button {
   padding: 15px;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 20px 0;
 }
 
-form button:hover {
+button:hover {
   background-color: var(--secondary-color);
   transform: scale(1.02);
 }
 
-form button:active {
+button:active {
   background-color: #000;
   transform: scale(0.98);
+}
+
+.senha-gerada {
+  font-size: 2em;
+  margin: 40px 0;
+  color: var(--primary-color);
+}
+
+input [type="checkbox"] {
+  width: 25px;
+  height: 25px;
 }
