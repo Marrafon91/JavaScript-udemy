@@ -86,7 +86,8 @@ button:active {
 }
 
 .senha-gerada {
-  font-size: 2em;
+  font-size: 1.7em;
+  text-align: center;
   margin: 40px 0;
   color: var(--primary-color);
 }
