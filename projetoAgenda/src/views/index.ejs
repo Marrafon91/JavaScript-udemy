@@ -1,41 +1,38 @@
-<%- include('includes/head')  %>
-<%- include('includes/nav')  %>
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
 
 <div class="container">
     <div class="row">
         <div class="col-lg-2"></div>
 
-        <div class="col-lg-8 my-3">
-            <h1 class="textcenter">Agenda</h1>
-            <p class="text-center lead">Seus contaos estão abaixo</p>
-
-            <div class="row">
-                <div class="col my-3">
-                    <div class="alert alert-danger">Um erro qualquer</div>
-                </div>
+        <div class="col-lg-8 my-3 text-center">
+            <h1 class="text-center">Agenda</h1>
+            <p class="lead">Seus contatos estão abaixo</p>
+            
+            <div class="table-responsive d-flex justify-content-center">
+                <table class="table my-3 w-auto">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Guilherme</td>
+                            <td>Marrafon</td>
+                            <td>123456789</td>
+                            <td>gui100rap@gmail.com.br</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-        </div>
-
-        <div class="responsive-table">
-            <table class="table my-3">
-                <tr>
-                    <td>Guilherme</td>
-                    <td>Marrafon</td>
-                    <td>123456789</td>
-                    <td>gui100rap@gmail.com.br</td>
-                </tr>
-                
-            </table>
         </div>
 
         <div class="col-lg-2"></div>
     </div>
 </div>
 
-<%- include('includes/footer')  %>
-
-    
-   
-
-    
+<%- include('includes/footer') %>
