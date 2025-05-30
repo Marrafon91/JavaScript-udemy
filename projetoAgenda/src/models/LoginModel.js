@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const validator = require('validator')
+const validator = require('validator');
 
 const LoginSchema = new mongoose.Schema({
     email: {type: String, required: true},
-    senha: {type: String, required: true}    
+    password: {type: String, required: true}    
 });
 
 const LoginModel = mongoose.model('Login', LoginSchema);
@@ -12,7 +12,7 @@ class Login {
     constructor(body) {
         this.body = body;
         this.errors = [];
-        this.user = null
+        this.user = null;
     }
 
     async register() {
@@ -23,8 +23,7 @@ class Login {
             this.user = await LoginModel.create(this.body);
         } catch(e) {
             console.log(e);
-        }
-        
+        }        
     }
 
     valida() {
