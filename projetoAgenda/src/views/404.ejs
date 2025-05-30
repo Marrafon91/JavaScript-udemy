@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center; 
-            align-items: center;    
-            background-color: #f8f8f8;
-        }
+<%- include('includes/head')  %>
+<%- include('includes/nav')  %>
 
-        h1 {
-            color: red;
-            font-size: 3rem;            
-        }
-        
-    </style>
-</head>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
 
-<body>
-    <h1>ERROR 404!</h1>
-</body>
-</html>
+        <div class="col-lg-8 my-5">
+            <h1 class="display-1 textcenter">Erro 404!</h1>
+            <p class="text-center lead">A página que você procura não existe.</p>
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+<%- include('includes/footer')  %>
+
+    
+   
+
+    
